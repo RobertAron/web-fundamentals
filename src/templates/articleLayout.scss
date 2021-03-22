@@ -1,0 +1,64 @@
+:root {
+    --deckgo-highlight-code-background: #282a36;
+    --deckgo-highlight-code-color: #ffffff;
+    --deckgo-highlight-code-atrule: #ff79c6;
+    --deckgo-highlight-code-padding: 16px;
+    --deckgo-highlight-code-border-radius: 4px;
+}
+
+a.anchor {
+    opacity: 0;
+    float: left;
+    padding-right: 4px;
+    margin-left: -20px;
+}
+
+*:hover>a.anchor,
+a.anchor:hover {
+    opacity: 1;
+}
+
+.articleContainer {
+    >section {
+        display: grid;
+        grid-template-areas:
+            "title   title"
+            "article example"
+        ;
+        grid-template-rows: min-content 1fr;
+        grid-template-columns: minmax(500px, 1fr) 1fr;
+        gap: 16px;
+
+        &> {
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                grid-area: title;
+                &::after {
+                    display: block;
+                    content: '';
+                }
+            }
+        }
+
+        &>.article {
+            grid-area: article;
+        }
+
+        &>.example {
+            top:0;
+            position: sticky;
+            grid-area: example;
+            height: min-content;
+        }
+    }
+
+    >*:last-child {
+        min-height: 100vh;
+
+    }
+}
