@@ -29,7 +29,7 @@ module.exports = {
       options: {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
-          `gatsby-remark-autolink-headers`,
+          // `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {

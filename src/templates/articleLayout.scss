@@ -18,47 +18,20 @@ a.anchor:hover {
     opacity: 1;
 }
 
-.articleContainer {
-    >section {
-        display: grid;
-        grid-template-areas:
-            "title   title"
-            "article example"
-        ;
-        grid-template-rows: min-content 1fr;
-        grid-template-columns: minmax(500px, 1fr) 1fr;
-        gap: 16px;
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 20px;
 
-        &> {
-
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                grid-area: title;
-                &::after {
-                    display: block;
-                    content: '';
-                }
-            }
-        }
-
-        &>.article {
-            grid-area: article;
-        }
-
-        &>.example {
-            top:0;
-            position: sticky;
-            grid-area: example;
-            height: min-content;
-        }
+    >.example {
+        position: sticky;
+        height: min-content;
+        top: 0;
     }
 
-    >*:last-child {
-        min-height: 100vh;
+}
 
-    }
+>*:last-child {
+    min-height: 100vh;
+
 }

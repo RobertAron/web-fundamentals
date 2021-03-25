@@ -394,6 +394,7 @@ type SitePluginPluginOptions = {
   readonly path: Maybe<Scalars['String']>;
   readonly ignore: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly extensions: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly gatsbyRemarkPlugins: Maybe<ReadonlyArray<Maybe<SitePluginPluginOptionsGatsbyRemarkPlugins>>>;
   readonly lessBabel: Maybe<Scalars['Boolean']>;
   readonly mediaTypes: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly root: Maybe<Scalars['String']>;
@@ -409,6 +410,15 @@ type SitePluginPluginOptionsEmitSchema = {
 
 type SitePluginPluginOptionsEmitPluginDocuments = {
   readonly src___generated___gatsby_plugin_documents_graphql: Maybe<Scalars['Boolean']>;
+};
+
+type SitePluginPluginOptionsGatsbyRemarkPlugins = {
+  readonly resolve: Maybe<Scalars['String']>;
+  readonly options: Maybe<SitePluginPluginOptionsGatsbyRemarkPluginsOptions>;
+};
+
+type SitePluginPluginOptionsGatsbyRemarkPluginsOptions = {
+  readonly terminal: Maybe<Scalars['String']>;
 };
 
 type SitePluginPackageJson = {
@@ -1503,6 +1513,7 @@ type SitePluginPluginOptionsFilterInput = {
   readonly path: Maybe<StringQueryOperatorInput>;
   readonly ignore: Maybe<StringQueryOperatorInput>;
   readonly extensions: Maybe<StringQueryOperatorInput>;
+  readonly gatsbyRemarkPlugins: Maybe<SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput>;
   readonly lessBabel: Maybe<BooleanQueryOperatorInput>;
   readonly mediaTypes: Maybe<StringQueryOperatorInput>;
   readonly root: Maybe<StringQueryOperatorInput>;
@@ -1518,6 +1529,19 @@ type SitePluginPluginOptionsEmitSchemaFilterInput = {
 
 type SitePluginPluginOptionsEmitPluginDocumentsFilterInput = {
   readonly src___generated___gatsby_plugin_documents_graphql: Maybe<BooleanQueryOperatorInput>;
+};
+
+type SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput = {
+  readonly elemMatch: Maybe<SitePluginPluginOptionsGatsbyRemarkPluginsFilterInput>;
+};
+
+type SitePluginPluginOptionsGatsbyRemarkPluginsFilterInput = {
+  readonly resolve: Maybe<StringQueryOperatorInput>;
+  readonly options: Maybe<SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput>;
+};
+
+type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput = {
+  readonly terminal: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginPackageJsonFilterInput = {
@@ -1640,6 +1664,8 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.path'
   | 'pluginCreator.pluginOptions.ignore'
   | 'pluginCreator.pluginOptions.extensions'
+  | 'pluginCreator.pluginOptions.gatsbyRemarkPlugins'
+  | 'pluginCreator.pluginOptions.gatsbyRemarkPlugins.resolve'
   | 'pluginCreator.pluginOptions.lessBabel'
   | 'pluginCreator.pluginOptions.mediaTypes'
   | 'pluginCreator.pluginOptions.root'
@@ -2191,6 +2217,9 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.path'
   | 'pluginOptions.ignore'
   | 'pluginOptions.extensions'
+  | 'pluginOptions.gatsbyRemarkPlugins'
+  | 'pluginOptions.gatsbyRemarkPlugins.resolve'
+  | 'pluginOptions.gatsbyRemarkPlugins.options.terminal'
   | 'pluginOptions.lessBabel'
   | 'pluginOptions.mediaTypes'
   | 'pluginOptions.root'

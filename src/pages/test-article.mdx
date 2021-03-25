@@ -1,12 +1,11 @@
 import { ArticleLayout } from "../templates/articleLayout.tsx"
 import { motion } from "framer-motion";
+import { HeaderToggle } from '../components/headerToggle'
 export default ArticleLayout
 
-<section>
+<div class='article' data-hidden-match='content-title-here'>
 
 # Content title here
-
-<div class='article'>
 
 Lorem ipsum rofl lmao ultrices lol lmao rofl, vulputate auctor lmao rofl varius elit lol lmao, lol nostra rofl potenti lol nulla. Imperdiet orci rofl lol vulputate porta rofl lol, rofl erat mauris scelerisque lol torquent, tellus urna rofl convallis lol lmao. Lol praesent himenaeos lmao rofl litora lol, lmao accumsan vulputate hendrerit lol. 
 Lorem ipsum rofl lmao ultrices lol lmao rofl, vulputate auctor lmao rofl varius elit lol lmao, lol nostra rofl potenti lol nulla. Imperdiet orci rofl lol vulputate porta rofl lol, rofl erat mauris scelerisque lol torquent, tellus urna rofl convallis lol lmao. Lol praesent himenaeos lmao rofl litora lol, lmao accumsan vulputate hendrerit lol. 
@@ -34,7 +33,7 @@ Lorem ipsum rofl lmao ultrices lol lmao rofl, vulputate auctor lmao rofl varius 
 Lorem ipsum rofl lmao ultrices lol lmao rofl, vulputate auctor lmao rofl varius elit lol lmao, lol nostra rofl potenti lol nulla. Imperdiet orci rofl lol vulputate porta rofl lol, rofl erat mauris scelerisque lol torquent, tellus urna rofl convallis lol lmao. Lol praesent himenaeos lmao rofl litora lol, lmao accumsan vulputate hendrerit lol. 
 
 </div>
-<div class='example'>
+<HeaderToggle title='content-title-here'>
 
 
 ```js
@@ -43,21 +42,18 @@ function test(){
 }
 ```
 
-<motion.form layoutId='form'>
-    <motion.input layoutId='input1'/>
-    <motion.input layoutId='input2'/>
+<motion.form layoutId='0'>
+    <motion.input layoutId='1'/>
+    <motion.input layoutId='3'/>
 </motion.form>
 
-</div>
-</section>
+</HeaderToggle>
 
+<div class='article' data-hidden-match='h2'>
 
-<section>
 
 ### h2
 
-<div class='article'>
-
 
 Lorem ipsum rofl lmao ultrices lol lmao rofl, vulputate auctor lmao rofl varius elit lol lmao, lol nostra rofl potenti lol nulla. Imperdiet orci rofl lol vulputate porta rofl lol, rofl erat mauris scelerisque lol torquent, tellus urna rofl convallis lol lmao. Lol praesent himenaeos lmao rofl litora lol, lmao accumsan vulputate hendrerit lol. 
 Lorem ipsum rofl lmao ultrices lol lmao rofl, vulputate auctor lmao rofl varius elit lol lmao, lol nostra rofl potenti lol nulla. Imperdiet orci rofl lol vulputate porta rofl lol, rofl erat mauris scelerisque lol torquent, tellus urna rofl convallis lol lmao. Lol praesent himenaeos lmao rofl litora lol, lmao accumsan vulputate hendrerit lol. 
@@ -109,7 +105,7 @@ Lorem ipsum rofl lmao ultrices lol lmao rofl, vulputate auctor lmao rofl varius 
 Lorem ipsum rofl lmao ultrices lol lmao rofl, vulputate auctor lmao rofl varius elit lol lmao, lol nostra rofl potenti lol nulla. Imperdiet orci rofl lol vulputate porta rofl lol, rofl erat mauris scelerisque lol torquent, tellus urna rofl convallis lol lmao. Lol praesent himenaeos lmao rofl litora lol, lmao accumsan vulputate hendrerit lol. 
 
 </div>
-<div class='example'>
+<HeaderToggle title='h2'>
 
 ```js
 function test(){
@@ -117,11 +113,9 @@ function test(){
 }
 ```
 
-<motion.form layoutId='form'>
-    <motion.input layoutId='input1'/>
-    <motion.input layoutId='input3'/>
-    <motion.input layoutId='input2'/>
+<motion.form layoutId='0'>
+    <motion.input layoutId='1'/>
+    <motion.input layoutId='2'/>
+    <motion.input layoutId='3'/>
 </motion.form>
-    
-</div>
-</section>
+</HeaderToggle>
